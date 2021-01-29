@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animatedScreen</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <ul id="rightbutton">
+        <li id="topline"></li>
+        <li id="midline"></li>
+        <li id="bottomline"></li>
+
+
+    </ul>
+
+
+
+    <h1>Branding</h1>
+    <div id="container">
+        <div id="section">
+            <a>Demo Reel</a>
+            <a>Faces</a>
+            <a>About</a>
+            <a>Contact</a>
+        </div>
+
+        <h3>About</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam natus aspernatur fugit dolorum molestiae
+            minima, qui non debitis sed eligendi quos, fugiat ga e
+            mnis obcaecati deserunt modi nostrum quia ipsum praesentium debitis, animi tempora corporis earum numquam
+            dolores voluptas id officiis expedita neque soluta quae culpa reprehenderit?
+            Deleniti rerum delectus saepe a perspiciatis dolorem quae, suscipit autem laboriosam molestiae, corporis
+            distinctio. Unde totam eligendi maiores quae mollitia eius reprehenderit odit asperiores, consequatur veniam
+            cupiditate, voluptates, neque veritatis.
+            Voluptates ea esse quidem, at animi repellendus culpa ptas magni corporis iure quae corrupti
+            Veniam consectetur error ex suscipit, impedit dolorum illo aut commodi vitae est voluptatum explicabo
+            blanditiis odio cumque molestiae laudantium ducimus placeat nemo vel voluptate at! Quo nesciunt veniam
+            quidem voluptatum?
+            quidem, at animi repellendus culpa ptas magni corporis iure quae corrupti
+            Veniam consectetur error ex suscipit, impedit dolorum illo aut commodi vitae est voluptatum explicabo
+            blanditiis odio cumque molestiae laudantium ducimus placeat nemo vel voluptate at! Quo nesciunt veniam
+            quidem voluptatum?
+            D
+            Voluptates ea esse quidem, at animi repellendus culpa ptas magni corporis iure quae corrupti
+            Veniam consectetur error ex suscipit, impedit dolorum illo aut commodi vitae est voluptatum explicabo
+            blanditiis odio cumque molestiae laudantium ducimus placeat nemo vel voluptate at! Quo nesciunt veniam
+            quidem voluptatum?
+            Dignissimos, ratione consectetur, explicabo vero modi officiis totam tempora, id perspiciatis voluptatibus
+            placeat nobis iste nesciunt. A non laboriosam accusamus voluptas dolorem corrupti consectetur tis ab nostrum
+            vero tenetur. Consequuntur, sit?</p>
+
+        <!-- <footer>
+        &copy2021 all rights reserved
+    </footer> -->
+    </div>
+
+
+
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+        background-color: coral;
+
+    }
+
+    footer {
+        text-align: center;
+        padding: 11px;
+        border: solid red;
+        background: transparent;
+        /* position: absolute; */
+
+
+
+
+        margin: auto;
+
+    }
+
+    #section {
+        /* border: solid green; */
+
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 30%;
+        left: 34%;
+        top: 0px;
+        font-size: 24px;
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        background: transparent;
+
+
+    }
+
+    /* #container{
+        border: solid #000000;
+        height: 100%;
+        padding: 20px 36px;
+        height: 92vh;
+        
+
+        background-color: bisque;
+    } */
+    #rightbutton {
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        top: 3px;
+        background: transparent;
+        /* border: solid red; */
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        z-index: 2;
+    }
+
+    li {
+        width: 55px;
+        height: 9px;
+        margin: 9px;
+        border-radius: 6px;
+        list-style: none;
+        background-color: black;
+        /* transform: translate(-50%,50%); */
+    }
+
+    p {
+        padding: 16px;
+        font-size: 19px;
+        align-self: center;
+    }
+
+    /* #midline{
+    visibility: hidden;
+}
+#topline{
+    transform: rotate(42deg);
+    transform-origin: left;
+}
+#bottomline{
+    transform: rotate(-42deg);
+    transform-origin: left;
+
+} */
+    #container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        position: relative;
+        width: 94%;
+        /* border: solid #000000; */
+        height: 86vh;
+        padding: 38px 36px;
+
+        overflow: hidden;
+        background-color: bisque;
+    }
+
+    h3 {
+        padding: 44px 18px;
+        padding-bottom: 2px;
+    }
+
+    h1 {
+        position: absolute;
+        left: 35px;
+        top: 6px;
+        z-index: 2;
+
+
+    }
+
+    a {
+        color: rgb(236, 150, 124);
+        /* padding: 3px 4px; */
+        margin: 16px 3px;
+        cursor: pointer;
+        font-size: 26px;
+        box-shadow: 5px 10px 36px rgb(168, 108, 108);
+
+
+
+    }
+
+    #section {
+        visibility: hidden;
+    }
+</style>
+<script>
+    let flag = false;
+
+
+    rightbutton.addEventListener("click", function () {
+
+        // $("#rightbutton").on('click',function(){
+        if (flag) {
+
+            $("#midline").css({ visibility: 'visible' }, "slow");
+
+
+
+            $("#topline").css({ transform: 'rotate(0deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+
+            $("#bottomline").css({ transform: 'rotate(0deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+
+            //transition for container
+            $("#container").css({ width: '94%', transformOrigin: "left", transition: "0.39s" }, "slow");
+
+
+            //fadding para
+            $("#section").animate({ top: "0px" }, 1)
+
+            $("#section").slideUp(100);
+
+            $("p").fadeIn(950);
+            $("h3").fadeIn(200);
+
+
+
+
+
+            flag = false;
+        } else {
+
+            $("#midline").css({ visibility: 'hidden' }, "slow");
+            $("#topline").css({ transform: 'rotate(42deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+
+            $("#bottomline").css({ transform: 'rotate(-42deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+
+
+            //transition for container
+
+            $("#container").css({ width: '35%', transformOrigin: "left", transition: "0.39s" }, "slow");
+
+
+            //fadding para
+            $("#section").css({ visibility: 'visible' })
+            $("#section").slideUp(1);
+            setTimeout(function () {
+
+                //   var nav=document.getElementById("section").style.top="300px";
+                $("#section").slideDown(50);
+                $("#section").animate({ top: "250px" }, 30)
+            }, 400)
+
+
+
+            $("p").fadeOut(50);
+            $("h3").fadeOut(100);
+
+
+            flag = true;
+
+        }
+
+
+    });
+        // });
+
+
+
+        // $("#rightbutton").on("click",function(){
+            //   $('#midline').css('visibility','visible');
+
+// });
+
+</script>
+
+</html>
