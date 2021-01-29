@@ -21,7 +21,7 @@
 
 
 
-    <h1>Branding</h1>
+    <h1>BRANDING</h1>
     <div id="container">
         <div id="section">
             <a>Demo Reel</a>
@@ -30,7 +30,7 @@
             <a>Contact</a>
         </div>
 
-        <h3>About</h3>
+        <h3>ABOUT</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam natus aspernatur fugit dolorum molestiae
             minima, qui non debitis sed eligendi quos, fugiat ga e
             mnis obcaecati deserunt modi nostrum quia ipsum praesentium debitis, animi tempora corporis earum numquam
@@ -175,6 +175,7 @@
     h3 {
         padding: 44px 18px;
         padding-bottom: 2px;
+        font-size: 26px;
     }
 
     h1 {
@@ -210,24 +211,46 @@
 
         // $("#rightbutton").on('click',function(){
         if (flag) {
+            //toggle button creation
+            // $("#midline").css({ visibility: 'visible' }, "slow");
 
-            $("#midline").css({ visibility: 'visible' }, "slow");
+            document.getElementById("midline").style.visibility = 'visible';
+
+
+            // $("#topline").css({ transform: 'rotate(0deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+            document.getElementById("topline").style.transition = '0.29s';
+            document.getElementById("topline").style.transformOrigin = 'left';
+            document.getElementById("topline").style.transform = 'rotate(0deg)';
 
 
 
-            $("#topline").css({ transform: 'rotate(0deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
 
-            $("#bottomline").css({ transform: 'rotate(0deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+            // $("#bottomline").css({ transform: 'rotate(0deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+            document.getElementById("bottomline").style.transition = '0.29s';
+            document.getElementById("bottomline").style.transformOrigin = 'left';
+            document.getElementById("bottomline").style.transform = 'rotate(0deg)';
+
+
+
+
 
             //transition for container
-            $("#container").css({ width: '94%', transformOrigin: "left", transition: "0.39s" }, "slow");
+            // $("#container").css({ width: '94%', transformOrigin: "left", transition: "0.39s" }, "slow");
+            document.getElementById("container").style.width = '94%';
+            document.getElementById("container").style.transformOrigin = 'left';
+            document.getElementById("container").style.transition = '0.39s';
+
+
+
 
 
             //fadding para
-            $("#section").animate({ top: "0px" }, 1)
+            $("#section").animate({ top: "0px" }, 1);
+
+
+
 
             $("#section").slideUp(100);
-
             $("p").fadeIn(950);
             $("h3").fadeIn(200);
 
@@ -238,15 +261,33 @@
             flag = false;
         } else {
 
-            $("#midline").css({ visibility: 'hidden' }, "slow");
-            $("#topline").css({ transform: 'rotate(42deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+            // $("#midline").css({ visibility: 'hidden' }, "slow");
+            document.getElementById("midline").style.visibility = 'hidden';
 
-            $("#bottomline").css({ transform: 'rotate(-42deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+
+
+
+
+            // $("#topline").css({ transform: 'rotate(42deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+
+            document.getElementById("topline").style.transition = '0.29s';
+            document.getElementById("topline").style.transformOrigin = 'left';
+            document.getElementById("topline").style.transform = 'rotate(42deg)';
+
+
+            // $("#bottomline").css({ transform: 'rotate(-42deg)', transformOrigin: "left", transition: "0.29s" }, "slow");
+
+            document.getElementById("bottomline").style.transition = '0.29s';
+            document.getElementById("bottomline").style.transformOrigin = 'left';
+            document.getElementById("bottomline").style.transform = 'rotate(-42deg)';
 
 
             //transition for container
 
-            $("#container").css({ width: '35%', transformOrigin: "left", transition: "0.39s" }, "slow");
+            // $("#container").css({ width: '35%', transformOrigin: "left", transition: "0.39s" }, "slow");
+            document.getElementById("container").style.width = '35%';
+            document.getElementById("container").style.transformOrigin = 'left';
+            document.getElementById("container").style.transition = '0.39s';
 
 
             //fadding para
@@ -257,6 +298,11 @@
                 //   var nav=document.getElementById("section").style.top="300px";
                 $("#section").slideDown(50);
                 $("#section").animate({ top: "250px" }, 30)
+                // document.getElementById("section").animate.top="250px",30;
+
+
+
+
             }, 400)
 
 
